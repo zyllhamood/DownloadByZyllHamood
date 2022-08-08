@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style>
+      body{
+        background-color: #464646;
+      }
+      .txt{
+        background-color: #747474;
+        border-color: #747474;
+        position: absolute;
+
+        width: 50%;
+
+        
+      }
+
+    </style>
+    <title>Download By Zyll</title>
+  </head>
+  <body>
+    <div class="container-fluid" >
+  <div class="row" style="margin-top:3%;">
+      <form action="" method="post">
+    {% csrf_token %}
+    <div class="container">
+      <div class="row" style="margin-top:7%;margin-left:1%;margin-right:1%;">
+        <div class="col-sm-3">
+          <input class="" type="text" placeholder="URL" id="urlVar" name="urlVar" style="margin-bottom: 20px;margin-top: 30px;width: 100%";>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+          <input class="" type="submit" value="Get Link" style="margin-bottom: 15px;margin-left: 95px;width: 50%;margin-top: 30px;">
+        </div>
+        <div class="col-sm-5"></div>
+        <div class="col-sm-3">
+          {% for url in urls %}
+            <a href="{{url}}" style="margin-left:154px;margin-top:50px;">Download</a>
+        {% endfor %}
+        </div>
+        <div class="col-md-8 col-xs-12"></div>
+
+
+
+      </div>
+  </div>
+  </form>
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
